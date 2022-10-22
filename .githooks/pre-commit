@@ -1,12 +1,11 @@
 #!/bin/sh
 
-#!/bin/sh
-# written by Noah
 LINT=$(which swiftlint)
+LINTPATH="$(pwd)/myapp"
 
 if [[ -e "${LINT}" ]]; then
 	echo "🚀  SwiftLint 시작..."
-	echo "🔍  lint 적용 경로: $(pwd) $(cd myapp)"
+	echo "🔍  lint 적용 경로: $LINTPATH"
 else
 	echo "SwiftLint가 존재하지 않습니다, 공식문서를 확인해주세요. 🌐 https://github.com/realm/SwiftLint"
 	exit 1
